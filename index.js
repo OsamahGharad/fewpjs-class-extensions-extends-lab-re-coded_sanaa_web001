@@ -5,7 +5,7 @@ class Polygon {
     this.sides=sides;
   }
   get countSides(){
-    return this.sides.lengh;
+    return this.sides.length;
   }
   get perimeter(){
     return sides.reduce((sum,side) => sum +side,0);
