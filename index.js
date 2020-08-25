@@ -16,9 +16,9 @@ class Triangle extends Polygon{
 
   get isValid(){
     if(this.sides.indexOf(0)+this.sides.indexOf(1) >this.sides.indexOf(2)){
-      return true;
+      return false;
     }
-    return false;
+    return true;
   }
 }
 //end class triangle
