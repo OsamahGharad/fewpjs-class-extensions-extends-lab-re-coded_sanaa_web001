@@ -8,14 +8,14 @@ class Polygon {
     return this.sides.length;
   }
   get perimeter(){
-    return sides.reduce((sum,side) => sum +side,0);
+    return this.sides.reduce((sum,side) => sum +side,0);
   }
 }//end class Poligon
 
 class Triangle extends Polygon{
 
   get isValid(){
-    if(sides.indexOf(0)+sides.indexOf(1) >sides.indexOf(2)){
+    if(this.sides.indexOf(0)+this.sides.indexOf(1) >this.sides.indexOf(2)){
       return true;
     }
     return false;
@@ -25,7 +25,7 @@ class Triangle extends Polygon{
 
 class square extends Polygon {
   get isValid(){
-    return (sides[0]===sides[2] && sides[1] ===sides[3] &&sides[0]===sides[1])
+    return (this.sides[0]===this.sides[2] && this.sides[1] ===this.sides[3] &&this.sides[0]===this.sides[1])
   }
   get area(){
     if(this.isValid)
