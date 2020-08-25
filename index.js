@@ -1,6 +1,6 @@
 // Your code here
 
-class Poligon {
+class Polygon {
   constructor(sides) {
     this.sides=sides;
   }
@@ -12,7 +12,7 @@ class Poligon {
   }
 }//end class Poligon
 
-class Triangle extends Poligon{
+class Triangle extends Polygon{
 
   get isValid(){
     if(sides.indexOf(0)+sides.indexOf(1) >sides.indexOf(2)){
@@ -23,7 +23,7 @@ class Triangle extends Poligon{
 }
 //end class triangle
 
-class square extends Poligon {
+class square extends Polygon {
   get isValid(){
     return (sides[0]===sides[2] && sides[1] ===sides[3] &&sides[0]===sides[1])
   }
