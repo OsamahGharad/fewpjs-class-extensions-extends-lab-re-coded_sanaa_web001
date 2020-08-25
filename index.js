@@ -1,21 +1,21 @@
 // Your code here
 
 class Poligon {
-  constructor(array) {
-    this.array=array;
+  constructor(sides) {
+    this.sides=sides;
   }
   get countSides(){
-    return this.array.count;
+    return this.sides.count;
   }
   get perimeter(){
-    return array.reduce((sum,side) => sum +side,0);
+    return sides.reduce((sum,side) => sum +side,0);
   }
 }//end class Poligon
 
-class Triangle extends{
+class Triangle extends Poligon{
 
   get isValid(){
-    if(array.indexOf(0)+array.indexOf(1) > array.indexOf(3)){
+    if(sides.indexOf(0)+sides.indexOf(1) >sides.indexOf(2)){
       return true;
     }
     return false;
@@ -24,10 +24,11 @@ class Triangle extends{
 //end class triangle
 
 class square extends Poligon {
-  // get isValid(){
-  // 
-  // }
+  get isValid(){
+    return (sides[0]===sides[2] && sides[1] ===sides[3] &&sides[0]===sides[1])
+  }
   get area(){
-    return area= this.array.reduce(sum,side)=>sum + side ,0);
+    if(this.isValid)
+    return this.sides[0] * this.sides[1];
   }
 }
